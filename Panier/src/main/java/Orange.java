@@ -15,25 +15,36 @@ public class Orange {
     //Constructeur de la classe
     public Orange(double p, String o)
     {
-        prix = p;
-        origine = o;
+        this.prix = p;
+        this.origine = o;
     }
     //Accesseur pour Prix
     public Double getPrix(){
-        return prix;
+        return this.prix;
     }
     public void setPrix(Double prx){
-        prix = prx;
+        this.prix = prx;
     }
     
    //Accesseur pour Origine
      public String getOrigine(){
-        return origine;
+        return this.origine;
     }
     public void setOrigine(String org){
-        origine = org;
+        this.origine = org;
     }
     
-    
+    public String toString()
+    {
+        String s=" ";
+        s += this.prix;
+        s += this.origine;
+        return s;
+    }
+    public boolean equals(Object obj)
+    {
+        Orange o = (Orange)obj;
+       return (this.prix == o.prix && this.origine.equals(o.origine));
+    }
     
 }

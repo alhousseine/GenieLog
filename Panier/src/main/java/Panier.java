@@ -1,3 +1,6 @@
+
+import java.util.ArrayList;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -10,27 +13,48 @@
  */
 public class Panier {
     
-    java.util.ArrayList listOrange;
+    private ArrayList<Orange> listOrange;
     private int taille;
     
     //Constructeur
    public Panier(int t)
     {
-        taille = t;
+        this.taille = t;
+        listOrange = new java.util.ArrayList();
     }
     
     //Accesseur 
-    public java.util.ArrayList getListOrange(){
+    public ArrayList<Orange> getListOrange(){
         return listOrange;
     }
     
-    public void setListOrane(java.util.ArrayList lo){
+    public void setListOrane(ArrayList<Orange> lo){
         listOrange = lo;
     }
     
     //Méthode 
     
-    private boolean 
-                
+    private boolean estPlein()
+    {
+        int lg = this.listOrange.size();
+        if(lg != 0 )
+            return true;
+        else return false;
+    }
+     
+    private boolean estVide()
+    {
+     int lg = this.listOrange.size();
+     if(lg == 0) return false;
+     else return true;
+    }
+    
+    public String ToString()
+    {
+        for (int i=0; i <= listOrange.size();i++)
+        {
+            System.out.println(listOrange.get(i));
+        }
+    }
     
 }
