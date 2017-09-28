@@ -28,7 +28,7 @@ public class Panier {
     
     //Accesseur 
     public ArrayList<Orange> getListOrange(){
-        return listOrangeg;
+        return listOrange;
     }
     
     public void setListOrane(ArrayList<Orange> lo){
