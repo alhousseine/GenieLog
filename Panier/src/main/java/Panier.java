@@ -1,3 +1,7 @@
+//traitement
+import fr.ufrsciencestech.panier.Orange;
+import java.util.ArrayList;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -10,7 +14,7 @@
  */
 public class Panier {
     
-    java.util.ArrayList listOrange;
+    private ArrayList<Orange> listOrange  = new ArrayList<Orange>();
     private int taille;
     
     //Constructeur
@@ -20,17 +24,40 @@ public class Panier {
     }
     
     //Accesseur 
-    public java.util.ArrayList getListOrange(){
+    public ArrayList getListOrange(){
         return listOrange;
     }
     
-    public void setListOrane(java.util.ArrayList lo){
+    public void setListOrane(ArrayList<Orange> lo){
         listOrange = lo;
     }
     
     //Méthode 
     
-    private boolean 
+    private boolean estPlein()
+    {
+        int lg = this.listOrange.size();
+        if(lg != 0 )
+            return true;
+        else return false;
+    }
+     
+    private boolean estVide()
+    {
+     int lg = this.listOrange.size();
+     if(lg == 0) return false;
+     else return true;
+    }
+    
+    public String ToString()
+    {
+        String s="";
+        for (Orange o : listOrange)
+        {
+            s+= o.getOrange();
+            
+        }
+    }
                 
     
 }
