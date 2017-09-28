@@ -1,4 +1,7 @@
+package fr.ufrsciencestech.panier;
 
+
+import fr.ufrsciencestech.panier.Orange;
 import java.util.ArrayList;
 
 /*
